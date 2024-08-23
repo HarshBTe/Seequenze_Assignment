@@ -9,7 +9,7 @@ const UpdateTask = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-        axios.get('http://localhost:3002/getUser/' + id )
+        axios.get('https://seequenze-assignment-backend.onrender.com/getUser/' + id )
         .then(result => {
             setTaskName(result.data.TaskName)
             setTaskDescription(result.data.TaskDescription)
@@ -19,7 +19,7 @@ const UpdateTask = () => {
 
     const Update = (e) => {
         e.preventDefault();
-        axios.put("http://localhost:3002/updateUser/" + id, {TaskName, TaskDescription})
+        axios.put("https://seequenze-assignment-backend.onrender.com/updateUser/" + id, {TaskName, TaskDescription})
         .then(result => {
           console.log(result)
           navigate('/')

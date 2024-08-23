@@ -9,7 +9,7 @@ const CreateTask = () => {
 
     const Submit = (e) => {
           e.preventDefault();
-          axios.post("http://localhost:3002/createUser", {TaskName, TaskDescription})
+          axios.post("https://seequenze-assignment-backend.onrender.com/createUser", {TaskName, TaskDescription})
           .then(result => {
             console.log(result)
             navigate('/')

@@ -7,13 +7,13 @@ const Tasks = () => {
     const [tasks, setTasks] = useState([])
 
     useEffect(() => {
-        axios.get('http://localhost:3002')
+        axios.get("https://seequenze-assignment-backend.onrender.com")
         .then(result => setTasks(result.data))
         .catch(err => console.log(err))
     }, [])
 
     const handleDelete = (id) => {
-        axios.delete('http://localhost:3002/deleteUser/' + id)
+        axios.delete('https://seequenze-assignment-backend.onrender.com/deleteUser/' + id)
         .then(res => {console.log(res)
             window.location.reload()
         })
